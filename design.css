@@ -1,0 +1,153 @@
+html , body{
+   height: 100%;
+   margin: 0;
+   padding: 0; 
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+.slide-active{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.card  {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background:#fff;
+}
+
+.image_side{ 
+    background-position:center;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+
+#image01{
+    background-image: url("047.jpg");
+}
+
+.card_details{
+    padding: 10% 5%;
+    box-sizing: border-box;
+    width: 50%;
+    background: #0A0A0A;
+}
+
+.card_theme{
+    font-weight: 900;
+    font-size: 1.7vmin;
+    text-transform: uppercase;
+    font-family:Poppins;
+    letter-spacing: 10px;
+    color: gray;
+
+}
+
+.card_header{
+    font-weight:700;
+    font-size: 54px;
+    text-transform:capitalize;
+    letter-spacing: 5px;
+    line-height: 91%;
+    margin: 3vmin 0 2vim;
+    color: #fff;
+    font-family: Poppins;
+}
+
+.card_para{
+    font-weight: 300;
+    font-size: 1.3vmax;
+    line-height: 180%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 2.5vmin;
+    color: #fff;
+}
+
+.card_link{
+    font-weight: 300;
+    font-size: 1.2vmax;
+    font-family: Poppins;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    cursor:pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.card_link:hover{
+    color: rgb(102, 163, 243);
+    cursor: pointer;
+   opacity: 0.9;
+   transition: opacity 0.3s ease;
+}
+
+.card_link::after{
+    content: ' →';
+}
+
+.prevnext{
+    position: absolute;
+    width: 4vmin;
+    height: 10vmin;
+    top:80%;
+    right: 2%;
+    bottom: 0;
+    margin: auto 0;
+    color: #fff;
+}
+
+.pn-btn{
+    color: #fff;
+    width: 100%;
+    border:0;
+    height: 50%;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+#prev , #next{
+    position: relative;
+    cursor: pointer;
+}
+
+#prev:focus , #next:focus{
+    outline: none;
+}
+
+#prev:hover::after , #next:hover::after{
+    opacity: 1;
+}
+
+#prev::after , #next::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+#prev::after{
+    content: '↥';
+}
+
+#next::after{
+    content: '↧';
+}
